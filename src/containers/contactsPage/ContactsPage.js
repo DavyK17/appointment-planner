@@ -10,7 +10,6 @@ export const ContactsPage = ({ contacts, addContact }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (!duplicate) {
       addContact(name, phone, email);
       setName("");
@@ -26,7 +25,7 @@ export const ContactsPage = ({ contacts, addContact }) => {
     }
 
     isDuplicate() ? setDuplicate(true) : setDuplicate(false);
-  }, [name, contacts, duplicate])
+  }, [name, contacts, duplicate]);
 
   return (
     <div>

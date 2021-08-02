@@ -24,7 +24,7 @@ export const ContactForm = ({
         onChange={({target: { value }}) => setPhone(value)}
         pattern="[1-9][0-9]{2}-[1-9][0-9]{2}-[0-9]{4}"
         required
-        placeholder="Phone number"
+        placeholder="Phone number (###-###-####)"
       />
       <input
         type="email"
@@ -33,7 +33,7 @@ export const ContactForm = ({
         required
         placeholder="Email address"
       />
-      <input type="submit" />
+      <input type="submit" value="Add contact" />
     </form>
   );
 };
