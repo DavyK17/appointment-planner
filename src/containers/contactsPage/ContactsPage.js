@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import ContactForm from "/src/components/contactForm/ContactForm";
-import TileList from "/src/components/tileList/TileList";
+import { ContactForm } from "../../components/contactForm/ContactForm";
+import { TileList } from "../../components/tileList/TileList";
 
 export const ContactsPage = ({ contacts, addContact }) => {
   const [name, setName] = useState("");
