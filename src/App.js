@@ -16,14 +16,14 @@ function App() {
   const addContact = (name, phone, email) => {
     setContacts([
       ...contacts,
-      { name: [name], phone: [phone], email: [email] }
+      { name: name, phone: phone, email: email }
     ]);
   };
 
   const addAppointment = (title, contact, date, time) => {
     setAppointments([
       ...appointments,
-      { title: [title], contact: [contact], date: [date], time: [time] }
+      { title: title, contact: contact, date: date, time: time }
     ]);
   };
 

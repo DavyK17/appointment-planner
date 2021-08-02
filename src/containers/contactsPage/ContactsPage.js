@@ -21,17 +21,18 @@ export const ContactsPage = ({ contacts, addContact }) => {
   useEffect(() => {
     const isDuplicate = () => {
       const result = contacts.find(contact => contact.name === name);
-      return (!result ? true : false);
-    }
+      return (result ? true : false);
+    };
 
     isDuplicate() ? setDuplicate(true) : setDuplicate(false);
   }, [name, contacts, duplicate]);
 
+  const h2Style = { fontWeight: 400, color: "red" };
+
   return (
     <div>
       <section>
-        <h2>Add Contacts</h2>
-        {duplicate || <p>"Name already exists!</p>}
+        <h2>Add Contacts{!duplicate || <span style={h2Style}> - Name already exists!</span>}</h2>
         <ContactForm
           name={name}
           setName={setName}
